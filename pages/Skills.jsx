@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "@/styles/Home.module.css";
-import Skil from "./Skil";
+
 
 const Skills = () => {
   const skillsArray = [
@@ -15,13 +15,17 @@ const Skills = () => {
     <div className={styles.skills__bar}>
       {skillsArray.map((items) => {
         return (
-            <Skil item={items}/>
+          <div className={styles.bar}>
+            <div className={styles.info}>
+              <span>{items.name}</span>
+            </div>
+            <div className={`${styles.progress__line} ${items.class}`}>
+              <span></span>
+            </div>
+          </div>
         );
       })}
-      </div>
-
-
-   
+    </div>
   );
 };
 
