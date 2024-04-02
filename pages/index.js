@@ -48,6 +48,7 @@ export default function Home() {
             height={37}
             priority
           />
+          fiez alhag
         </div>
 
         <div className={styles.grid}>
