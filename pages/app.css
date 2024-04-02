@@ -1,0 +1,145 @@
+
+.skills__bar{
+    width: 600px;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2)  ;
+  }
+  @media (max-width:767px) {
+    .skills__bar{
+        width: 400px;
+    }
+  }
+  
+  .skills__bar .bar{
+    margin: 20px 0;
+  }
+  
+  .skills__bar .bar:first-child{
+    margin-top: 0;
+  }
+  
+  
+  .skills__bar .bar .info span{
+    font-size:17px;
+    font-weight: 500;
+    opacity: 0;
+    animation: opac 0.5s 1s linear forwards; 
+  }
+  
+  
+  .skills__bar .bar .info{
+    margin-bottom: 5px;
+  }
+  
+  
+  .skills__bar .bar .progress__line {
+    position: relative;
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 10px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
+    0px 1px rgba(255, 255, 255, 0.8);
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+  }
+  
+  
+  
+  .skills__bar .bar .progress__line span{
+    position: absolute;
+    height:100%;
+    background: #6665ee;
+    z-index: 10;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+  }
+  
+  @keyframes animate {
+    100%{
+        transform: scale(1)
+    }
+  }
+  
+  .skills__bar .bar .progress__line span::before{
+    content: ""; 
+    position: absolute;
+    top: -15px;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid #000 ;
+    border-color:  transparent #000 transparent transparent;
+    opacity: 0;
+    animation: opac 1s 2s linear forwards;
+    
+  }
+  
+  .skills__bar .bar .progress__line span::after{
+    content: "80%"; 
+    position: absolute;
+    top: -25px;
+    right: 0px;
+    background-color: #000 ;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500px;
+    padding: 1px 8px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: opac 1s 2s linear forwards; 
+  }
+  
+  @keyframes opac {
+    0%{
+        opacity: 0;
+    }
+  
+    100%{
+        opacity: 1;
+    }
+  }
+  
+  .skills__bar .bar .progress__line.html span::after{
+    content: "95%";
+  }
+  .skills__bar .bar .progress__line.react span::after{
+    content: "75%";
+  }
+  .skills__bar .bar .progress__line.javascript span::after{
+    content: "90%";
+  }
+  .skills__bar .bar .progress__line.python span::after{
+    content: "65%";
+  }
+  .skills__bar .bar .progress__line.css span::after{
+    content: "80%";
+  }
+  
+  
+  .skills__bar .bar .progress__line.html span{
+    width: 95%;
+  }
+  .skills__bar .bar .progress__line.react span{
+    width: 75%;
+  }
+  .skills__bar .bar .progress__line.javascript span{
+    width: 90%;
+  }
+  .skills__bar .bar .progress__line.python span{
+    width: 65%;
+  }
+  .skills__bar .bar .progress__line.css span{
+    width: 80%;
+  }
+  
+  
+  
+  
+  
+  
